@@ -2,34 +2,34 @@ import axios from "axios"
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
 
-export default function HomaPage(){
+export default function HomaPage() {
 
-    const [videogames, setVideogames]= useState()
+    const [videogames, setVideogames] = useState()
 
-    const fetchdata = () =>{
+    const fetchdata = () => {
         axios.get(import.meta.env.VITE_API_URL)
-        .then(resp=>{
-            const data= resp.data
-            // console.log(data);
-            setVideogames(data.data)
-        })
-        .catch(err =>{console.log(err);})
+            .then(resp => {
+                const data = resp.data
+                // console.log(data);
+                setVideogames(data.data)
+            })
+            .catch(err => { console.log(err); })
     }
 
-    useEffect(fetchdata,[])
-    return(
+    useEffect(fetchdata, [])
+    return (
         <>
-        <div className="w-4/5 m-auto py-5">
-            <h1 className="text-2xl">I tuoi video giochi </h1>
-            <div className="grid grid-cols-3 gap-5 m-auto">
-            {videogames?.map(videogame => 
-            <div className="col">
-            <Card data={videogame} key={videogame.id}/>
-            </div>
-            )}
+            <div className="w-4/5 m-auto py-5">
+                <h1 className="text-2xl">I tuoi video giochi </h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5 xl:gap-10 m-auto">
+                    {videogames?.map(videogame =>
+                        <div className="col" key={videogame.id}>
+                            <Card data={videogame} />
+                        </div>
+                    )}
 
+                </div>
             </div>
-        </div>
         </>
     )
 }

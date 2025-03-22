@@ -1,11 +1,11 @@
 import Jumbotron from "../components/jumbotron";
 
-export default function AboutPage() {
+export default function ContactsPage() {
     return (
         <>
-            <Jumbotron title='A proposito di' />
+            <Jumbotron title='Contattami' />
             <div>
-                a proposito di me
+                I miei contatti
             </div>
         </>
     )

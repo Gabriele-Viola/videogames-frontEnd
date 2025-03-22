@@ -9,7 +9,7 @@ export default function Card({ data, show }) {
 
     function namePlatform(platform, where) {
         if (platform.name == 'nintendo-switch') {
-            return <div key={platform?.id} className="rounded-2xl p-1 mx-1 inline-block" style={{ backgroundColor: platform.color }}>
+            return <div key={platform?.id} className="rounded-2xl p-1 m-2 inline-block" style={{ backgroundColor: platform.color }}>
                 <div className={`flex items-center ${where && 'px-1'}`}>
                     <BsNintendoSwitch />
                     {where && <strong className="px-2 uppercase hidden sm:inline">{platform.name}</strong>}
@@ -17,7 +17,7 @@ export default function Card({ data, show }) {
                 </div>
             </div>
         } else if (platform.name == 'xbox') {
-            return <div key={platform?.id} className="rounded-2xl p-1 mx-1 inline-block" style={{ backgroundColor: platform.color }}>
+            return <div key={platform?.id} className="rounded-2xl p-1 m-2 inline-block" style={{ backgroundColor: platform.color }}>
                 <div className={`flex items-center ${where && 'px-1'}`}>
                     <BsXbox />
                     {where && <strong className="px-2 uppercase hidden sm:inline">{platform.name}</strong>}
@@ -26,15 +26,15 @@ export default function Card({ data, show }) {
             </div>
 
         } else if (platform.name == 'playstation') {
-            return <div key={platform?.id} className="rounded-2xl p-1 mx-1 inline-block" style={{ backgroundColor: platform.color }}>
-                <div className={`flex items-center ${where && 'px-1'}`}>
+            return <div key={platform?.id} className="rounded-2xl p-1 m-1 inline-block" style={{ backgroundColor: platform.color }}>
+                <div className={`flex items-center ${where && 'px-1 '}`}>
                     <BsPlaystation className="text-white" />
                     {where && <strong className="px-2 uppercase hidden sm:inline text-white">{platform.name}</strong>}
 
                 </div>
             </div>
         } else if (platform.name == 'steam') {
-            return <div key={platform?.id} className="rounded-2xl p-1 mx-1 inline-block" style={{ backgroundColor: platform.color }}>
+            return <div key={platform?.id} className="rounded-2xl p-1 m-2 inline-block" style={{ backgroundColor: platform.color }}>
                 <div className={`flex items-center ${where && 'px-1'}`}>
                     <BsSteam />
                     {where && <strong className="px-2 uppercase hidden sm:inline">{platform.name}</strong>}
@@ -68,27 +68,29 @@ export default function Card({ data, show }) {
                     <h3 className="title text-lg font-medium uppercase px-1 py-2 mb-2 bg-gray-50/50 backdrop-blur-md rounded-tl-2xl rounded-br-2xl ">{data.title}</h3>
                     <img className="z-40 w-full rounded-tl-2xl rounded-br-2xl border-orange-700 border-2 mb-3" src={`${import.meta.env.VITE_API_IMG}${data?.image}`} alt={data?.title} />
 
+                    <div className="flex flex-col justify-between">
 
-                    {!show && (
-                        <div className=" bg-gray-50/50 backdrop-blur-md rounded-tl-3xl rounded-br-3xl p-2 mb-4">
-                            <p>{textTruncade(data?.description, show)}</p>
-                        </div>
-                    )}
-                    <div className=" my-2 flex justify-between items-center">
-                        <div>
-                            {data?.platforms?.map(platform => namePlatform(platform, show))}
-                        </div>
                         {!show && (
-
-
-                            <Link
-                                to={`/videogame/${data?.id}`}
-                                className="bg-orange-500 border-2 border-orange-600 text-orange-50 rounded-tl-2xl rounded-br-2xl py-1 px-2 hover:border-2 hover:bg-orange-50 hover:text-orange-500"
-                            >
-                                Scoprimi
-                            </Link>
-
+                            <div className=" bg-gray-50/50 backdrop-blur-md rounded-tl-3xl rounded-br-3xl p-2 mb-4">
+                                <p>{textTruncade(data?.description, show)}</p>
+                            </div>
                         )}
+                        <div className=" my-2 flex justify-between items-center">
+                            <div className="">
+                                {data?.platforms?.map(platform => namePlatform(platform, show))}
+                            </div>
+                            {!show && (
+
+
+                                <Link
+                                    to={`/videogame/${data?.id}`}
+                                    className="bg-orange-500 border-2 border-orange-600 text-orange-50 rounded-tl-2xl rounded-br-2xl py-1 px-2 hover:border-2 hover:bg-orange-50 hover:text-orange-500"
+                                >
+                                    Scoprimi
+                                </Link>
+
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>

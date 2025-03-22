@@ -12,7 +12,7 @@ export default function Card({ data, show }) {
             return <div key={platform?.id} className="rounded-2xl p-1 m-2 inline-block" style={{ backgroundColor: platform.color }}>
                 <div className={`flex items-center ${where && 'px-1'}`}>
                     <BsNintendoSwitch />
-                    {where && <strong className="px-2 uppercase hidden sm:inline">{platform.name}</strong>}
+                    {where && <strong className="px-1 uppercase hidden sm:inline">{platform.name}</strong>}
 
                 </div>
             </div>
@@ -20,7 +20,7 @@ export default function Card({ data, show }) {
             return <div key={platform?.id} className="rounded-2xl p-1 m-2 inline-block" style={{ backgroundColor: platform.color }}>
                 <div className={`flex items-center ${where && 'px-1'}`}>
                     <BsXbox />
-                    {where && <strong className="px-2 uppercase hidden sm:inline">{platform.name}</strong>}
+                    {where && <strong className="px-1 uppercase hidden sm:inline">{platform.name}</strong>}
 
                 </div>
             </div>
@@ -76,7 +76,7 @@ export default function Card({ data, show }) {
                             </div>
                         )}
                         <div className=" my-2 flex justify-between items-center">
-                            <div className="">
+                            <div >
                                 {data?.platforms?.map(platform => namePlatform(platform, show))}
                             </div>
                             {!show && (

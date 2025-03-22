@@ -1,12 +1,14 @@
 import { Outlet } from "react-router-dom";
 import AppHeader from "../components/AppHeader";
-export default function Deflayout(){
-    return(
+import AppFooter from "../components/AppFooter";
+export default function Deflayout() {
+    return (
         <>
-        <AppHeader/>
+            <AppHeader />
             <main>
-                <Outlet/>
+                <Outlet />
             </main>
+            <AppFooter />
         </>
     )
 }

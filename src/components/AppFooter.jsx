@@ -7,7 +7,7 @@ export default function AppFooter() {
             <div className="w-4/5 m-auto flex justify-between py-4">
 
                 <div className="who text-orange-400 text-xl">
-                    Sviluppato da <span className="bg-orange-400 text-gray-900 rounded-md px-2 shadow-md shadow-orange-800">Gabriele Viola</span> come progetto finale!
+                    Sviluppato da <Link to={'https://www.linkedin.com/in/gabriele-viola-733245202/'} className="bg-orange-400 text-gray-900 rounded-md px-2 shadow-md shadow-orange-800  hover:text-orange-800">Gabriele Viola</Link> come progetto finale!
                 </div>
                 <div className="social">
                     <ul className="flex justify-end content-center">

@@ -25,29 +25,27 @@ main {
 }
 
 
-/* Larghezza e altezza della scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 
 }
 
-/* Colore di sfondo della scrollbar */
+
 ::-webkit-scrollbar-track {
     background: oklch(0.278 0.033 256.848);
-    /* Colore dello sfondo */
+
     border-radius: 5px;
 }
 
-/* Colore della "maniglia" (thumb) della scrollbar */
 ::-webkit-scrollbar-thumb {
     background: #ff6600;
-    /* Arancione */
+
     border-radius: 5px;
 }
 
 /* Quando passi il mouse sopra la scrollbar */
 ::-webkit-scrollbar-thumb:hover {
     background: #ff4500;
-    /* Arancione più scuro */
+
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Share+Tech+Mono&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&family=Tektur:wght@400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 @import "tailwindcss";
 
 
@@ -7,3 +9,32 @@
         height: 250px;
     }
 }
+
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.text-shadow-orange {
+    text-Shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* header {
+
+    .right-menu {
+        .this-right {
+
+
+            a {
+                background-color: oklch(0.75 0.183 55.934);
+                color: oklch(0.278 0.033 256.848);
+
+                &.active {
+                    color: oklch(0.75 0.183 55.934);
+                    background-color: oklch(0.278 0.033 256.848)
+                }
+            }
+
+        }
+    }
+} */

@@ -8,6 +8,12 @@ export default function ShowPage() {
     const [videogame, setVideogame] = useState({})
     const { id } = useParams()
 
+    const PageTitle = () => {
+        useEffect(() => {
+            document.title = videogame?.title
+        }, [])
+    }
+
     const fetchDataShow = () => {
         axios.get(`${import.meta.env.VITE_API_URL}/${id}`)
             .then(resp => {
@@ -20,6 +26,10 @@ export default function ShowPage() {
                 console.log(err);
             })
     }
+    useEffect(() => {
+        if (videogame?.title)
+            document.title = videogame?.title
+    }, [videogame])
     useEffect(() => fetchDataShow(), [id])
 
     return (

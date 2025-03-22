@@ -48,7 +48,7 @@ export default function Card({ data, show }) {
 
     function textTruncade(text, where) {
         if (!text) return 'nessuna descrizione'
-        return where ? text : text?.slice(0, 170) + '...'
+        return where ? text : text?.slice(0, 150) + '...'
 
     }
 
@@ -70,7 +70,7 @@ export default function Card({ data, show }) {
 
 
                     {!show && (
-                        <div className="bg-gray-50/50 backdrop-blur-md rounded-tl-3xl rounded-br-3xl p-2 mb-4">
+                        <div className=" bg-gray-50/50 backdrop-blur-md rounded-tl-3xl rounded-br-3xl p-2 mb-4">
                             <p>{textTruncade(data?.description, show)}</p>
                         </div>
                     )}

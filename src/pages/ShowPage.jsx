@@ -9,11 +9,6 @@ export default function ShowPage() {
     const [videogame, setVideogame] = useState({})
     const { id } = useParams()
 
-    const PageTitle = () => {
-        useEffect(() => {
-            document.title = videogame?.title
-        }, [])
-    }
 
     const fetchDataShow = () => {
         axios.get(`${import.meta.env.VITE_API_URL}/${id}`)

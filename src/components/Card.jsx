@@ -3,9 +3,6 @@ import { BsNintendoSwitch, BsXbox, BsPlaystation, BsSteam, BsDpad } from "react-
 import { Link } from "react-router-dom"
 
 export default function Card({ data, show }) {
-    const [logoPltform, setLogoPlatform] = useState('')
-    console.log(data);
-    console.log(show);
 
     function namePlatform(platform, where) {
         if (platform.name == 'nintendo-switch') {
@@ -84,7 +81,7 @@ export default function Card({ data, show }) {
 
                                 <Link
                                     to={`/videogame/${data?.id}`}
-                                    className="bg-orange-500 border-2 border-orange-600 text-orange-50 rounded-tl-2xl rounded-br-2xl py-1 px-2 hover:border-2 hover:bg-orange-50 hover:text-orange-500"
+                                    className="bg-orange-500 border-2 border-orange-600  text-orange-50 rounded-tl-2xl rounded-br-2xl py-1 px-2 hover:border-0 hover:bg-orange-50 active:inset-shadow-sm active:inset-shadow-orange-500 hover:text-orange-500"
                                 >
                                     Scoprimi
                                 </Link>

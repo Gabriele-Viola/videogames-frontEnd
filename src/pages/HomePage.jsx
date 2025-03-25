@@ -36,7 +36,7 @@ export default function HomaPage() {
                     </div>
                     :
                     <div className="w-4/5 m-auto">
-                        <div className="bg-gray-700 text-orange-500 text-3xl text-center py-5 my-10 rounded-2xl text-shadow-orange shadow-md shadow-gray-600">
+                        <div className="bg-gray-700 text-orange-500 text-3xl text-center py-5 my-10 rounded-2xl text-shadow shadow-md shadow-gray-600">
                             Loading...
                         </div>
                     </div>

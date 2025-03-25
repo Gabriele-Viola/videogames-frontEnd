@@ -16,7 +16,7 @@ body {
     background-color: oklch(0.278 0.033 256.848);
 }
 
-.text-shadow-orange {
+.text-shadow {
     text-Shadow: 2px 2px 4px rgba(0, 0, 0, 0.676);
 }
 

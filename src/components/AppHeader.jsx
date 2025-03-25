@@ -1,7 +1,9 @@
 import { BiMenu } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 
 export default function AppHeader() {
+
 
     function toggleMenu() {
         const menu = document.querySelector('.hamburger-menu')

@@ -41,7 +41,7 @@ export default function Card({ data, show }) {
             return <div key={platform?.id} className="rounded-2xl p-1 m-2 inline-block" style={{ backgroundColor: platform.color }}>
                 <div className={`flex items-center ${where && 'px-1'}`}>
                     <BsDpadFill />
-                    {where && <strong className="px-2 uppercase hidden sm:inline text-shadow-orange text-white">{platform.name}</strong>}
+                    {where && <strong className="px-2 uppercase hidden sm:inline text-shadow text-white">{platform.name}</strong>}
 
                 </div>
             </div>

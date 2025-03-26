@@ -4,6 +4,9 @@ import Card from "../components/Card";
 import Jumbotron from "../components/jumbotron";
 
 export default function HomaPage() {
+    useEffect(() => {
+        document.title = 'Sala Giochi'
+    }, [])
 
     const [videogames, setVideogames] = useState()
 

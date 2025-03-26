@@ -2,8 +2,12 @@ import { BiAt, BiSolidShareAlt } from "react-icons/bi";
 import Jumbotron from "../components/jumbotron";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function ContactsPage() {
+    useEffect(() => {
+        document.title = 'Contacts'
+    }, [])
     return (
         <>
             <Jumbotron title='Contattami' />

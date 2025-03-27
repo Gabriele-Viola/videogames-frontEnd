@@ -14,7 +14,6 @@ export default function ShowPage() {
         axios.get(`${import.meta.env.VITE_API_URL}/${id}`)
             .then(resp => {
                 const dataShow = resp.data
-                console.log(dataShow);
                 setVideogame(dataShow.data)
 
             })

@@ -5,6 +5,8 @@ import HomaPage from './pages/HomePage'
 import ShowPage from './pages/ShowPage'
 import AboutPage from './pages/AboutPage'
 import ContactsPage from './pages/ContactsPage'
+import NotFound from './pages/NotFoundPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
 
@@ -18,6 +20,7 @@ function App() {
             <Route path='/videogame/:id' element={<ShowPage />} />
             <Route path='/about' element={<AboutPage />} />
             <Route path='/contact' element={<ContactsPage />} />
+            <Route path='*' element={<NotFoundPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
